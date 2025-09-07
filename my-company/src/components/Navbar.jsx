@@ -31,6 +31,8 @@ export default function Navbar() {
 
 const styles = {
   nav: {
+    display: "flex",
+    justifyContent: "center",
     padding: "1rem",
     backgroundColor: "#282c34",
   },
