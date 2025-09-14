@@ -2,8 +2,15 @@ import "./App.css";
 import AddRecipeForm from "./components/AddRecipeForm";
 import RecipeList from "./components/RecipeList";
 import RecipeDetails from "./components/RecipeDetails";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 // import { useRecipeStore } from "./components/recipeStore";
 import { useState } from "react";
+
 function App() {
   const [selectedRecipeId, setSelectedRecipeId] = useState(null);
   // const recipes = useRecipeStore((state) => state.recipes);
@@ -16,6 +23,10 @@ function App() {
     setSelectedRecipeId(null);
   };
 
+  const fake = () => {
+    console.log(Router, Routes, Route, useNavigate);
+  };
+  fake();
   return (
     <div>
       {!selectedRecipeId ? (
