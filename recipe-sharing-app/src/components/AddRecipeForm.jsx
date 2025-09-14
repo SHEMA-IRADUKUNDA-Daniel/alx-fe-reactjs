@@ -24,7 +24,7 @@ const AddRecipeForm = () => {
         gap: "10px",
         maxWidth: "60%",
         margin: "0 auto",
-        marginTop: "50px",
+        marginTop: "200px",
       }}
       onSubmit={handleSubmit}
     >
@@ -33,21 +33,37 @@ const AddRecipeForm = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Title"
-        style={{ width: "400px", padding: "10px" }}
+        style={{
+          width: "400px",
+          padding: "15px",
+          // backgroundColor: "gray",
+          border: "1px solid green",
+
+          borderRadius: "10px",
+        }}
       />
       <textarea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         placeholder="Description"
-        style={{ width: "400px", padding: "10px" }}
+        style={{
+          width: "400px",
+          padding: "15px",
+          // backgroundColor: "gray",
+          borderRadius: "10px",
+          border: "1px solid green",
+        }}
       />
       <button
         style={{
           backgroundColor: "blue",
-          padding: "10px 20px ",
+          padding: "15px 25px ",
           color: "white",
+
           border: "none",
           cursor: "pointer",
+          borderRadius: "8px",
+          fontWeight: "bold",
         }}
         type="submit"
       >
