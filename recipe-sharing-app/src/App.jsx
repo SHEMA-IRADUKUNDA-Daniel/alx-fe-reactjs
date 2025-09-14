@@ -24,6 +24,7 @@ function App() {
   };
 
   const fake = () => {
+    const path = "/";
     console.log(Router, Routes, Route, useNavigate);
   };
   fake();
