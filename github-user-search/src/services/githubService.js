@@ -3,7 +3,7 @@ import axios from "axios";
 const BASE_URL = "https://api.github.com";
 const token = import.meta.env.VITE_APP_GITHUB_API_KEY;
 const headers = token ? { Authorization: `token ${token}` } : {};
-
+// https://api.github.com/search/users?q
 export const fetchUserData = async ({ username, location, minRepos }) => {
   try {
     if (!username) return [];
