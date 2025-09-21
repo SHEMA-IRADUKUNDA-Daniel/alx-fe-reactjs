@@ -1,24 +1,35 @@
 import { useState } from "react";
+import { fetchUserData } from "../services/githubService";
 
-export default function Search({ onSearch, isLoading, users }) {
+export default function Search() {
   const [username, setUsername] = useState("");
   const [location, setLocation] = useState("");
   const [minRepos, setMinRepos] = useState("");
+  const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSearch({
+    if (!username.trim()) return;
+
+    setIsLoading(true);
+    setUsers([]);
+
+    const results = await fetchUserData({
       username: username.trim(),
       location: location.trim(),
       minRepos: minRepos.trim(),
     });
+
+    setUsers(results);
+    setIsLoading(false);
   };
 
   return (
     <div className="max-w-xl mx-auto">
       <form
-        className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-4 items-end"
         onSubmit={handleSubmit}
+        className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-4 items-end"
       >
         <div className="flex-1">
           <label className="block text-gray-700 mb-1">Username</label>
@@ -64,15 +75,12 @@ export default function Search({ onSearch, isLoading, users }) {
 
       <div className="mt-6">
         {isLoading && <p className="text-gray-500 text-center">Loading...</p>}
-
-        {!isLoading && users && users.length === 0 && (
+        {!isLoading && users.length === 0 && (
           <p className="text-red-500 text-center">
-            Looks like we cant find the user
+            Looks like we can't find the user.
           </p>
         )}
-
         {!isLoading &&
-          users &&
           users.map((user) => (
             <div
               key={user.id}
@@ -85,8 +93,12 @@ export default function Search({ onSearch, isLoading, users }) {
               />
               <div>
                 <p className="font-semibold">{user.name || user.login}</p>
-                {user.location && <p>Location: {user.location}</p>}
-                <p>Public Repos: {user.public_repos}</p>
+                {user.location && (
+                  <p className="text-gray-500">Location: {user.location}</p>
+                )}
+                {user.public_repos !== undefined && (
+                  <p className="text-gray-500">Repos: {user.public_repos}</p>
+                )}
                 <a
                   href={user.html_url}
                   target="_blank"
