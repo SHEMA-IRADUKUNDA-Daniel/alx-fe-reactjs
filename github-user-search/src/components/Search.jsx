@@ -67,7 +67,7 @@ export default function Search({ onSearch, isLoading, users }) {
 
         {!isLoading && users && users.length === 0 && (
           <p className="text-red-500 text-center">
-            Looks like we can't find the user.
+            Looks like we cant find the user
           </p>
         )}
 
