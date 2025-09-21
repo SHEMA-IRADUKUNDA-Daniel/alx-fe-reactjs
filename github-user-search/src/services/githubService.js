@@ -5,7 +5,7 @@ const token = import.meta.env.VITE_APP_GITHUB_API_KEY;
 const headers = token ? { Authorization: `token ${token}` } : {};
 
 // Search users
-export const searchUsers = async ({ username, location, minRepos }) => {
+const fetchUserData = async ({ username, location, minRepos }) => {
   try {
     const queryParts = [];
     if (username) queryParts.push(`${username} in:login`);
@@ -20,14 +20,14 @@ export const searchUsers = async ({ username, location, minRepos }) => {
       { headers }
     );
 
-    // Fetch full profile for each user to get location and repo count
+    // Get full user details for each user
     const detailedUsers = await Promise.all(
       data.items.map(async (user) => {
         const { data: userDetails } = await axios.get(
           `${BASE_URL}/users/${user.login}`,
           { headers }
         );
-        return userDetails; // contains location, public_repos, name, etc.
+        return userDetails;
       })
     );
 
@@ -37,3 +37,4 @@ export const searchUsers = async ({ username, location, minRepos }) => {
     return [];
   }
 };
+export default fetchUserData;
