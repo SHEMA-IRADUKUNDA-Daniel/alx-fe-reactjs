@@ -2,21 +2,9 @@ import axios from "axios";
 
 const BASE_URL = "https://api.github.com";
 const token = import.meta.env.VITE_APP_GITHUB_API_KEY;
-console.log("GitHub token loaded:", token ? "✅ present" : "❌ missing");
-const headers = token ? { Authorization: `Bearer ${token}` } : {};
+const headers = token ? { Authorization: `token ${token}` } : {};
 
-export const fetchUserData = async (username) => {
-  try {
-    const { data } = await axios.get(`${BASE_URL}/users/${username}`, {
-      headers,
-    });
-    return data;
-  } catch (error) {
-    console.error("User not found:", error.response?.status, error.message);
-    return null;
-  }
-};
-
+// Search users
 export const searchUsers = async ({ username, location, minRepos }) => {
   try {
     const queryParts = [];
@@ -31,26 +19,21 @@ export const searchUsers = async ({ username, location, minRepos }) => {
       `${BASE_URL}/search/users?q=${encodeURIComponent(query)}`,
       { headers }
     );
-    return data.items || [];
-  } catch (error) {
-    console.error("Search failed:", error.response?.status, error.message);
-    return [];
-  }
-};
 
-export const fetchUserRepos = async (username) => {
-  try {
-    const { data } = await axios.get(
-      `${BASE_URL}/users/${username}/repos?sort=updated&per_page=5`,
-      { headers }
+    // Fetch full profile for each user to get location and repo count
+    const detailedUsers = await Promise.all(
+      data.items.map(async (user) => {
+        const { data: userDetails } = await axios.get(
+          `${BASE_URL}/users/${user.login}`,
+          { headers }
+        );
+        return userDetails; // contains location, public_repos, name, etc.
+      })
     );
-    return data;
+
+    return detailedUsers;
   } catch (error) {
-    console.error(
-      "Failed to fetch repos:",
-      error.response?.status,
-      error.message
-    );
+    console.error("Search failed:", error.message);
     return [];
   }
 };
