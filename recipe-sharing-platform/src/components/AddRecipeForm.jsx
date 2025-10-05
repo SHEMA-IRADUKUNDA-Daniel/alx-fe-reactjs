@@ -87,7 +87,7 @@ export default function AddRecipeForm({ onAddRecipe }) {
 
         <div>
           <label className="block font-semibold text-gray-700 mb-1">
-            Instructions
+            preparation steps
           </label>
           <textarea
             value={instructions}
