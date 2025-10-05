@@ -40,7 +40,7 @@ export default function AddRecipeForm({ onAddRecipe }) {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-xl mt-10">
+    <div className="max-w-3xl mx-auto p-5 md:p-6 bg-white shadow-lg rounded-xl mt-10">
       <h2 className="text-2xl font-bold mb-6 text-gray-800">
         Add a New Recipe
       </h2>
