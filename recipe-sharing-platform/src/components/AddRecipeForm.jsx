@@ -107,7 +107,7 @@ export default function AddRecipeForm({ onAddRecipe }) {
 
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-primary to-primary-light text-blue-500 font-bold py-3 px-4 rounded-lg shadow-lg hover:from-primary-dark hover:to-primary-dark transition"
+          className="w-full cursor-pointer bg-gradient-to-r from-primary to-primary-light text-blue-500 font-bold py-3 px-4 rounded-lg shadow-lg hover:from-primary-dark hover:to-primary-dark transition"
         >
           Add Recipe
         </button>

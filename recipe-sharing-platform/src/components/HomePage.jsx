@@ -14,9 +14,6 @@ export default function HomePage() {
   }, []);
   return (
     <div className="bg-gray-50 min-h-screen py-10">
-      <div>
-        <AddRecipeForm onAddRecipe={handleAddRecipe} />
-      </div>
       <h1 className="text-3xl font-bold text-center text-primary mb-10">
         🍽️ Delicious Recipes
       </h1>
@@ -43,6 +40,9 @@ export default function HomePage() {
             </div>
           </Link>
         ))}
+      </div>
+      <div>
+        <AddRecipeForm onAddRecipe={handleAddRecipe} />
       </div>
     </div>
   );
