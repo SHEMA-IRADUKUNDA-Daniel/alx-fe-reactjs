@@ -2,14 +2,21 @@ import React from "react";
 import { useEffect, useState } from "react";
 import recipesData from "../data.json";
 import { Link } from "react-router-dom";
+import AddRecipeForm from "./AddRecipeForm";
 export default function HomePage() {
   const [recipes, setRecipes] = useState([]);
-
+  const handleAddRecipe = (newRecipe) => {
+    setRecipes((prev) => [...prev, newRecipe]);
+    alert("Recipe added successfully!");
+  };
   useEffect(() => {
     setRecipes(recipesData);
   }, []);
   return (
     <div className="bg-gray-50 min-h-screen py-10">
+      <div>
+        <AddRecipeForm onAddRecipe={handleAddRecipe} />
+      </div>
       <h1 className="text-3xl font-bold text-center text-primary mb-10">
         🍽️ Delicious Recipes
       </h1>
