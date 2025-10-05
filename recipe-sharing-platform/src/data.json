@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://www.allrecipes.com/thmb/XcGZ4A0H66dME3_DrsPRS3XN0mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg "
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://www.allrecipes.com/thmb/XcGZ4A0H66dME3_DrsPRS3XN0mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg "
+  },
+  {
+    "id": 3,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://www.allrecipes.com/thmb/XcGZ4A0H66dME3_DrsPRS3XN0mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://www.allrecipes.com/thmb/XcGZ4A0H66dME3_DrsPRS3XN0mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg"
+  }
+]
