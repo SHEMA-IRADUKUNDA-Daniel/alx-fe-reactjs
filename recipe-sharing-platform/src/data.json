@@ -3,24 +3,91 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 large eggs",
+      "50g grated Parmesan cheese",
+      "2 cloves garlic, minced",
+      "Salt and black pepper to taste"
+    ],
+    "instructions": [
+      "Cook spaghetti in salted boiling water until al dente.",
+      "Fry pancetta until crispy, then add minced garlic for 30 seconds.",
+      "In a bowl, whisk eggs with Parmesan, salt, and pepper.",
+      "Drain pasta and quickly toss with pancetta, then remove from heat.",
+      "Add egg mixture, stirring quickly to create a creamy sauce.",
+      "Serve immediately with extra Parmesan and black pepper."
+    ],
     "image": "https://www.allrecipes.com/thmb/XcGZ4A0H66dME3_DrsPRS3XN0mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg "
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "ingredients": [
+      "2 chicken breasts, sliced",
+      "1 red bell pepper, sliced",
+      "1 broccoli head, cut into florets",
+      "2 tbsp soy sauce",
+      "1 tbsp oyster sauce",
+      "1 tsp sesame oil",
+      "2 cloves garlic, minced"
+    ],
+    "instructions": [
+      "Heat sesame oil in a large pan or wok.",
+      "Add chicken and cook until lightly browned.",
+      "Add garlic and vegetables, stir-frying for 3–4 minutes.",
+      "Pour in soy sauce and oyster sauce, stir well.",
+      "Cook for 2 more minutes until vegetables are tender-crisp.",
+      "Serve hot with steamed rice."
+    ],
     "image": "https://www.allrecipes.com/thmb/XcGZ4A0H66dME3_DrsPRS3XN0mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg "
   },
   {
     "id": 3,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 large eggs",
+      "50g grated Parmesan cheese",
+      "2 cloves garlic, minced",
+      "Salt and black pepper to taste"
+    ],
+    "instructions": [
+      "Cook spaghetti in salted boiling water until al dente.",
+      "Fry pancetta until crispy, then add minced garlic for 30 seconds.",
+      "In a bowl, whisk eggs with Parmesan, salt, and pepper.",
+      "Drain pasta and quickly toss with pancetta, then remove from heat.",
+      "Add egg mixture, stirring quickly to create a creamy sauce.",
+      "Serve immediately with extra Parmesan and black pepper."
+    ],
+
     "image": "https://www.allrecipes.com/thmb/XcGZ4A0H66dME3_DrsPRS3XN0mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg"
   },
   {
     "id": 4,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "ingredients": [
+      "2 chicken breasts, sliced",
+      "1 red bell pepper, sliced",
+      "1 broccoli head, cut into florets",
+      "2 tbsp soy sauce",
+      "1 tbsp oyster sauce",
+      "1 tsp sesame oil",
+      "2 cloves garlic, minced"
+    ],
+    "instructions": [
+      "Heat sesame oil in a large pan or wok.",
+      "Add chicken and cook until lightly browned.",
+      "Add garlic and vegetables, stir-frying for 3–4 minutes.",
+      "Pour in soy sauce and oyster sauce, stir well.",
+      "Cook for 2 more minutes until vegetables are tender-crisp.",
+      "Serve hot with steamed rice."
+    ],
     "image": "https://www.allrecipes.com/thmb/XcGZ4A0H66dME3_DrsPRS3XN0mM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/45736-chicken-tikka-masala-VAT-001-Beauty-4x3-0e74094106c74671b66b4906327a1e17.jpg"
   }
 ]
