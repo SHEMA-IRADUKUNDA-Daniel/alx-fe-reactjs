@@ -3,15 +3,12 @@ import * as Yup from "yup";
 
 export default function FormikForm() {
   const validationSchema = Yup.object({
-    username: Yup.string()
-      .min(3, "Username must be at least 3 characters long")
-      .required("Username is required"),
-    email: Yup.string()
-      .email("Invalid email format")
-      .required("Email is required"),
-    password: Yup.string()
-      .min(6, "Password must be at least 6 characters long")
-      .required("Password is required"),
+    /* prettier-ignore */
+    username: Yup.string().min(3, "Username must be at least 3 characters long").required("Username is required"),
+    /* prettier-ignore */
+    email: Yup.string().email("Invalid email format").required("Email is required"),
+    /* prettier-ignore */
+    password: Yup.string().min(6, "Password must be at least 6 characters long").required("Password is required"),
   });
 
   const handleSubmit = (values, { resetForm }) => {
