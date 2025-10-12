@@ -4,7 +4,7 @@ import * as Yup from "yup";
 export default function FormikForm() {
   const validationSchema = Yup.object({
     /* prettier-ignore */
-    username: Yup.string().min(3, "Username must be at least 3 characters long").required("Username is required"),
+    username: Yup.string().required("Username is required").min(3, "Username must be at least 3 characters long"),
     /* prettier-ignore */
     email: Yup.string().email("Invalid email format").required("Email is required"),
     /* prettier-ignore */
