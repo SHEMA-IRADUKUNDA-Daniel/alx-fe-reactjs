@@ -10,7 +10,7 @@ export default function RegistrationForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!username || !email || password) {
+    if (!username || !email || !password) {
       setError("Please fill in all fields before submitting.");
       return;
     }
